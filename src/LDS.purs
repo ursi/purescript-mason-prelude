@@ -1,3 +1,4 @@
+--| Linear Data Structure
 module LDS where
 
 import Prelude
@@ -8,7 +9,6 @@ import Data.List (List(..))
 import Data.List as List
 import Data.Unfoldable (class Unfoldable)
 
--- Linear Data Structure
 class LDS f where
   cons :: ∀ a. a -> f a -> f a
   index :: ∀ a. f a -> Int -> Maybe a
