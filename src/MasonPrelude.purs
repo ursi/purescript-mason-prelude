@@ -3,8 +3,8 @@ module MasonPrelude
   , (^)
   ) where
 
-import Prelude hiding ((<<<), (>>>)) as Exports
-import Compose as Exports
+import Prelude as Exports
+import Data.Function.Compose as Exports
 import Data.Either (Either(..)) as Exports
 import Data.Either.Nested (type (\/)) as Exports
 import Data.Foldable (class Foldable, fold, foldl, foldMap, foldr, intercalate, sequence_, traverse_) as Exports
