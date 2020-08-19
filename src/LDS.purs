@@ -1,13 +1,10 @@
 --| Linear Data Structure
 module LDS where
 
-import Prelude
 import Data.Array as Array
-import Data.Foldable (class Foldable)
 import Data.Maybe (Maybe)
 import Data.List (List(..))
 import Data.List as List
-import Data.Unfoldable (class Unfoldable)
 
 class LDS f where
   cons :: ∀ a. a -> f a -> f a
