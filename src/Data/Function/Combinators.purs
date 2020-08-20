@@ -6,6 +6,7 @@ infixl 9 S.compose as <.
 
 infixr 9 S.composeFlipped as .>
 
+--| `\f g x y -> f (g x y)`
 compose2 :: ∀ a b x y. (a -> b) -> (x -> y -> a) -> x -> y -> b
 compose2 f g x y = f (g x y)
 
@@ -16,6 +17,7 @@ compose2Flipped f g x y = g (f x y)
 
 infixr 9 compose2Flipped as ..>
 
+--| `\f g x y z -> f (g x y z)`
 compose3 :: ∀ a b x y z. (a -> b) -> (x -> y -> z -> a) -> x -> y -> z -> b
 compose3 f g x y z = f (g x y z)
 
@@ -26,6 +28,7 @@ compose3Flipped f g x y z = g (f x y z)
 
 infixr 9 compose3Flipped as ...>
 
+--| `\f g w x y z -> f (g w x y z)`
 compose4 :: ∀ a b w x y z. (a -> b) -> (w -> x -> y -> z -> a) -> w -> x -> y -> z -> b
 compose4 f g w x y z = f (g w x y z)
 
@@ -36,6 +39,7 @@ compose4Flipped f g w x y z = g (f w x y z)
 
 infixr 9 compose4Flipped as ....>
 
+--| `\f g x y -> f x (g y)`
 composeSecond :: ∀ a b x y. (x -> b -> a) -> (y -> b) -> x -> y -> a
 composeSecond f g x y = f x (g y)
 
@@ -46,6 +50,7 @@ composeSecondFlipped f g x y = g x (f y)
 
 infixr 9 composeSecondFlipped as ~.>
 
+--| `\f g x y z -> f x y (g z)`
 composeThird :: ∀ a b x y z. (x -> y -> b -> a) -> (z -> b) -> x -> y -> z -> a
 composeThird f g x y z = f x y (g z)
 
@@ -56,6 +61,7 @@ composeThirdFlipped f g x y z = g x y (f z)
 
 infixr 9 composeThirdFlipped as ~~.>
 
+--| `\f g w x y z -> f w x y (g z)`
 composeFourth :: ∀ a b w x y z. (w -> x -> y -> b -> a) -> (z -> b) -> w -> x -> y -> z -> a
 composeFourth f g w x y z = f w x y (g z)
 
@@ -66,6 +72,7 @@ composeFourthFlipped f g w x y z = g w x y (f z)
 
 infixr 9 composeFourthFlipped as ~~~.>
 
+--| `\f g x y z -> f x (g y z)`
 compose2Second :: ∀ a b x y z. (x -> b -> a) -> (y -> z -> b) -> x -> y -> z -> a
 compose2Second f g x y z = f x (g y z)
 
@@ -76,6 +83,7 @@ compose2SecondFlipped f g x y z = g x (f y z)
 
 infixr 9 compose2SecondFlipped as ~..>
 
+--| `\f g w x y z -> f w x (g y z)`
 compose2Third :: ∀ a b w x y z. (w -> x -> b -> a) -> (y -> z -> b) -> w -> x -> y -> z -> a
 compose2Third f g w x y z = f w x (g y z)
 
@@ -86,6 +94,7 @@ compose2ThirdFlipped f g w x y z = g w x (f y z)
 
 infixr 9 compose2ThirdFlipped as ~~..>
 
+--| `\f g w x y z -> f w (g x y z)`
 compose3Second :: ∀ a b w x y z. (w -> b -> a) -> (x -> y -> z -> b) -> w -> x -> y -> z -> a
 compose3Second f g w x y z = f w (g x y z)
 
