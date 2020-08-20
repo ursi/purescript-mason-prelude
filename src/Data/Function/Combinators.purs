@@ -1,4 +1,4 @@
-module Data.Function.Compose where
+module Data.Function.Combinators where
 
 import Control.Semigroupoid as S
 
