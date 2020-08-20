@@ -6,92 +6,92 @@ infixl 9 S.compose as <.
 
 infixr 9 S.composeFlipped as .>
 
-compose2 :: ∀ a b c d. (a -> b) -> (c -> d -> a) -> c -> d -> b
-compose2 f1 f2 c d = f1 (f2 c d)
+compose2 :: ∀ a b x y. (a -> b) -> (x -> y -> a) -> x -> y -> b
+compose2 f g x y = f (g x y)
 
 infixl 9 compose2 as <..
 
-compose2Flipped :: ∀ a b c d. (c -> d -> a) -> (a -> b) -> c -> d -> b
-compose2Flipped f2 f1 c d = f1 (f2 c d)
+compose2Flipped :: ∀ a b x y. (x -> y -> a) -> (a -> b) -> x -> y -> b
+compose2Flipped f g x y = g (f x y)
 
 infixr 9 compose2Flipped as ..>
 
-compose3 :: ∀ a b c d e. (a -> b) -> (c -> d -> e -> a) -> c -> d -> e -> b
-compose3 f1 f3 c d e = f1 (f3 c d e)
+compose3 :: ∀ a b x y z. (a -> b) -> (x -> y -> z -> a) -> x -> y -> z -> b
+compose3 f g x y z = f (g x y z)
 
 infixl 9 compose3 as <...
 
-compose3Flipped :: ∀ a b c d e. (c -> d -> e -> a) -> (a -> b) -> c -> d -> e -> b
-compose3Flipped f3 f1 c d e = f1 (f3 c d e)
+compose3Flipped :: ∀ a b x y z. (x -> y -> z -> a) -> (a -> b) -> x -> y -> z -> b
+compose3Flipped f g x y z = g (f x y z)
 
 infixr 9 compose3Flipped as ...>
 
-compose4 :: ∀ a b c d e f. (a -> b) -> (c -> d -> e -> f -> a) -> c -> d -> e -> f -> b
-compose4 f1 f4 c d e f = f1 (f4 c d e f)
+compose4 :: ∀ a b w x y z. (a -> b) -> (w -> x -> y -> z -> a) -> w -> x -> y -> z -> b
+compose4 f g w x y z = f (g w x y z)
 
 infixl 9 compose4 as <....
 
-compose4Flipped :: ∀ a b c d e f. (c -> d -> e -> f -> a) -> (a -> b) -> c -> d -> e -> f -> b
-compose4Flipped f4 f1 c d e f = f1 (f4 c d e f)
+compose4Flipped :: ∀ a b w x y z. (w -> x -> y -> z -> a) -> (a -> b) -> w -> x -> y -> z -> b
+compose4Flipped f g w x y z = g (f w x y z)
 
 infixr 9 compose4Flipped as ....>
 
-composeSecond :: ∀ a b c d. (c -> b -> a) -> (d -> b) -> c -> d -> a
-composeSecond f2 f1 c = f2 c <. f1
+composeSecond :: ∀ a b x y. (x -> b -> a) -> (y -> b) -> x -> y -> a
+composeSecond f g x y = f x (g y)
 
 infixl 9 composeSecond as <~.
 
-composeSecondFlipped :: ∀ a b c d. (d -> b) -> (c -> b -> a) -> c -> d -> a
-composeSecondFlipped f1 f2 c = f1 .> f2 c
+composeSecondFlipped :: ∀ a b x y. (y -> b) -> (x -> b -> a) -> x -> y -> a
+composeSecondFlipped f g x y = g x (f y)
 
 infixr 9 composeSecondFlipped as ~.>
 
-composeThird :: ∀ a b c d e. (c -> d -> b -> a) -> (e -> b) -> c -> d -> e -> a
-composeThird f3 f1 c d = f3 c d <. f1
+composeThird :: ∀ a b x y z. (x -> y -> b -> a) -> (z -> b) -> x -> y -> z -> a
+composeThird f g x y z = f x y (g z)
 
 infixl 9 composeThird as <~~.
 
-composeThirdFlipped :: ∀ a b c d e. (e -> b) -> (c -> d -> b -> a) -> c -> d -> e -> a
-composeThirdFlipped f1 f3 c d = f1 .> f3 c d
+composeThirdFlipped :: ∀ a b x y z. (z -> b) -> (x -> y -> b -> a) -> x -> y -> z -> a
+composeThirdFlipped f g x y z = g x y (f z)
 
 infixr 9 composeThirdFlipped as ~~.>
 
-composeFourth :: ∀ a b c d e f. (c -> d -> e -> b -> a) -> (f -> b) -> c -> d -> e -> f -> a
-composeFourth f4 f1 c d e = f4 c d e <. f1
+composeFourth :: ∀ a b w x y z. (w -> x -> y -> b -> a) -> (z -> b) -> w -> x -> y -> z -> a
+composeFourth f g w x y z = f w x y (g z)
 
 infixl 9 composeFourth as <~~~.
 
-composeFourthFlipped :: ∀ a b c d e f. (f -> b) -> (c -> d -> e -> b -> a) -> c -> d -> e -> f -> a
-composeFourthFlipped f1 f4 c d e = f1 .> f4 c d e
+composeFourthFlipped :: ∀ a b w x y z. (z -> b) -> (w -> x -> y -> b -> a) -> w -> x -> y -> z -> a
+composeFourthFlipped f g w x y z = g w x y (f z)
 
 infixr 9 composeFourthFlipped as ~~~.>
 
-compose2Second :: ∀ a b c d e. (c -> b -> a) -> (d -> e -> b) -> c -> d -> e -> a
-compose2Second f2 f2' c = f2 c <.. f2'
+compose2Second :: ∀ a b x y z. (x -> b -> a) -> (y -> z -> b) -> x -> y -> z -> a
+compose2Second f g x y z = f x (g y z)
 
 infixl 9 compose2Second as <~..
 
-compose2SecondFlipped :: ∀ a b c d e. (d -> e -> b) -> (c -> b -> a) -> c -> d -> e -> a
-compose2SecondFlipped f2 f2' c = f2 ..> f2' c
+compose2SecondFlipped :: ∀ a b x y z. (y -> z -> b) -> (x -> b -> a) -> x -> y -> z -> a
+compose2SecondFlipped f g x y z = g x (f y z)
 
 infixr 9 compose2SecondFlipped as ~..>
 
-compose2Third :: ∀ a b c d e f. (c -> d -> b -> a) -> (e -> f -> b) -> c -> d -> e -> f -> a
-compose2Third f3 f2 c d = f3 c d <.. f2
+compose2Third :: ∀ a b w x y z. (w -> x -> b -> a) -> (y -> z -> b) -> w -> x -> y -> z -> a
+compose2Third f g w x y z = f w x (g y z)
 
 infixl 9 compose2Third as <~~..
 
-compose2ThirdFlipped :: ∀ a b c d e f. (e -> f -> b) -> (c -> d -> b -> a) -> c -> d -> e -> f -> a
-compose2ThirdFlipped f2 f3 c d = f2 ..> f3 c d
+compose2ThirdFlipped :: ∀ a b w x y z. (y -> z -> b) -> (w -> x -> b -> a) -> w -> x -> y -> z -> a
+compose2ThirdFlipped f g w x y z = g w x (f y z)
 
 infixr 9 compose2ThirdFlipped as ~~..>
 
-compose3Second :: ∀ a b c d e f. (c -> b -> a) -> (d -> e -> f -> b) -> c -> d -> e -> f -> a
-compose3Second f2 f3 c = f2 c <... f3
+compose3Second :: ∀ a b w x y z. (w -> b -> a) -> (x -> y -> z -> b) -> w -> x -> y -> z -> a
+compose3Second f g w x y z = f w (g x y z)
 
 infixl 9 compose3Second as <~...
 
-compose3SecondFlipped :: ∀ a b c d e f. (d -> e -> f -> b) -> (c -> b -> a) -> c -> d -> e -> f -> a
-compose3SecondFlipped f3 f2 c = f3 ...> f2 c
+compose3SecondFlipped :: ∀ a b w x y z. (x -> y -> z -> b) -> (w -> b -> a) -> w -> x -> y -> z -> a
+compose3SecondFlipped f g w x y z = g w (f x y z)
 
 infixl 9 compose3SecondFlipped as ~...>
