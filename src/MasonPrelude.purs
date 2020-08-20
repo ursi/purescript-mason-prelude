@@ -1,9 +1,11 @@
 module MasonPrelude
   ( module Exports
+  , (%)
   , (^)
   ) where
 
 import Prelude as Exports
+import Prelude (mod)
 import Data.Function.Combinators as Exports
 import Data.Either (Either(..)) as Exports
 import Data.Either.Nested (type (\/)) as Exports
@@ -21,5 +23,7 @@ import Debug (todo) as Exports
 import Effect (Effect) as Exports
 import LDS as Exports
 import Math (pow)
+
+infixl 7 mod as %
 
 infixl 8 pow as ^
