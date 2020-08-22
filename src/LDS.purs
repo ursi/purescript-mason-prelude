@@ -6,10 +6,10 @@ import Data.Maybe (Maybe)
 import Data.List (List(..))
 import Data.List as List
 
-class LDS f where
-  cons :: ∀ a. a -> f a -> f a
-  index :: ∀ a. f a -> Int -> Maybe a
-  range :: Int -> Int -> f Int
+class LDS l where
+  cons :: ∀ a. a -> l a -> l a
+  index :: ∀ a. l a -> Int -> Maybe a
+  range :: Int -> Int -> l Int
 
 infixl 8 index as !!
 
