@@ -3,6 +3,8 @@ module LDS where
 
 import Prelude
 import Data.Array as Array
+import Data.CatList (CatList)
+import Data.CatList as CatList
 import Data.Foldable (class Foldable, foldl)
 import Data.Function.Combinators
 import Data.Maybe (Maybe(..))
@@ -33,6 +35,13 @@ instance ldsArray :: LDS Array where
   index = Array.index
   range = Array.range
   difference = Array.difference
+
+instance ldsCatList :: LDS CatList where
+  cons = CatList.cons
+  uncons = CatList.uncons
+  index l = indexDefault l
+  range i = rangeDefault i
+  difference l = differenceDefault l
 
 instance ldsList :: LDS List where
   cons = Cons

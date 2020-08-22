@@ -1,6 +1,7 @@
 { name = "mason-prelude"
 , dependencies =
   [ "arrays"
+  , "catenable-lists"
   , "debug"
   , "either"
   , "lists"
