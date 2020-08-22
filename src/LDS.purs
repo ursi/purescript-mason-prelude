@@ -14,6 +14,7 @@ class LDS l where
   uncons :: ∀ a. l a -> Maybe (a /\ l a)
   index :: ∀ a. l a -> Int -> Maybe a
   range :: Int -> Int -> l Int
+  difference :: ∀ a. Eq a => l a -> l a -> l a
 
 infixl 8 index as !!
 
@@ -21,14 +22,18 @@ infix 8 range as ..
 
 infixr 6 cons as :
 
+infix 5 difference as \\
+
 instance ldsArray :: LDS Array where
   cons = Array.cons
   uncons = Array.uncons .> map \{ head, tail } -> head /\ tail
   index = Array.index
   range = Array.range
+  difference = Array.difference
 
 instance ldsList :: LDS List where
   cons = Cons
   uncons = List.uncons .> map \{ head, tail } -> head /\ tail
   index = List.index
   range = List.range
+  difference = List.difference
