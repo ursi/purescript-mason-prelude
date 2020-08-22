@@ -21,7 +21,7 @@ import Data.Tuple.Nested (type (/\), (/\)) as Exports
 import Data.Unfoldable (class Unfoldable, unfoldr) as Exports
 import Debug (todo) as Exports
 import Effect (Effect) as Exports
-import LDS as Exports
+import LDS (class LDS, (!!), (..), (\\), cons, uncons) as Exports
 import Math (pow)
 
 infixl 7 mod as %
