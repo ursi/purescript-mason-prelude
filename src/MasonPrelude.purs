@@ -26,6 +26,7 @@ import Effect.Class as Exports
 import Effect.Uncurried as Exports
 import Effect.Unsafe as Exports
 import Math (pow)
+import Unsafe.Coerce as Exports
 
 infixl 7 mod as %
 
