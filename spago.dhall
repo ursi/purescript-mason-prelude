@@ -3,6 +3,7 @@
   [ "arrays"
   , "debug"
   , "either"
+  , "functions"
   , "lists"
   , "math"
   , "prelude"
