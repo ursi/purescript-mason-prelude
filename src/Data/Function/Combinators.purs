@@ -2,6 +2,7 @@ module Data.Function.Combinators where
 
 import Control.Semigroupoid as S
 
+--| `\f g x -> f (g x)`
 infixl 9 S.compose as <.
 
 infixr 9 S.composeFlipped as .>
