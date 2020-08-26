@@ -1,3 +1,8 @@
+--| ```
+--| \a b -> f a (g b) c
+--| =
+--| f <~. g ~~$ c
+--| ```
 module Data.Function.Combinators where
 
 import Control.Semigroupoid as S
