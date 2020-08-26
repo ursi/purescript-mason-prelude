@@ -105,3 +105,38 @@ compose3SecondFlipped :: ∀ a b w x y z. (x -> y -> z -> b) -> (w -> b -> a) ->
 compose3SecondFlipped f g w x y z = g w (f x y z)
 
 infixl 9 compose3SecondFlipped as ~...>
+
+--| `\f x y -> f y x`
+--|
+--| (`flip`)
+applySecond :: ∀ x y a. (y -> x -> a) -> x -> y -> a
+applySecond f x y = f y x
+
+infixl 8 applySecond as ~$
+
+applySecondFlipped :: ∀ x y a. x -> (y -> x -> a) -> y -> a
+applySecondFlipped x f y = f y x
+
+infixr 8 applySecondFlipped as ~#
+
+--| `\f x y z = f y z x`
+applyThird :: ∀ x y z a. (y -> z -> x -> a) -> x -> y -> z -> a
+applyThird f x y z = f y z x
+
+infixl 8 applyThird as ~~$
+
+applyThirdFlipped :: ∀ x y z a. x -> (y -> z -> x -> a) -> y -> z -> a
+applyThirdFlipped x f y z = f y z x
+
+infixr 8 applyThirdFlipped as ~~#
+
+--| `\f w x y z = f x y z w`
+applyFourth :: ∀ w x y z a. (x -> y -> z -> w -> a) -> w -> x -> y -> z -> a
+applyFourth f w x y z = f x y z w
+
+infixl 8 applyFourth as ~~~$
+
+applyFourthFlipped :: ∀ w x y z a. w -> (x -> y -> z -> w -> a) -> x -> y -> z -> a
+applyFourthFlipped w f x y z = f x y z w
+
+infixr 8 applyFourthFlipped as ~~~#
