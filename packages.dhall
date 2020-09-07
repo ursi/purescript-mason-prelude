@@ -4,6 +4,6 @@ let upstream =
 let overrides = {=}
 
 let additions =
-      https://raw.githubusercontent.com/ursi/purescript-package-set/1/packages.dhall sha256:b4cd948a32b22fd2093a8c69acb886671a024434a1c8c7e9762a2697bd9e6543
+      https://raw.githubusercontent.com/ursi/purescript-package-set/3/packages.dhall sha256:4d9980bc46c738fd0dc758df60b16a1f87517527fb1b62b6a663c3c289a6efb3
 
 in  upstream // overrides // additions
