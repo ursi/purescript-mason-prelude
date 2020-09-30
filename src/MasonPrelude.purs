@@ -24,10 +24,10 @@ import Debug (todo) as Exports
 import Effect (Effect) as Exports
 import Effect.Class as Exports
 import Effect.Uncurried as Exports
-import Effect.Unsafe as Exports
+import Effect.Unsafe (unsafePerformEffect) as Exports
 import Math (pow)
 import PointFree as Exports
-import Unsafe.Coerce as Exports
+import Unsafe.Coerce (unsafeCoerce) as Exports
 
 infixl 7 mod as %
 
