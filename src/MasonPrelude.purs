@@ -6,6 +6,16 @@ module MasonPrelude
 
 import Prelude as Exports
 import Prelude (mod)
+import Control.Parallel
+  ( parApply
+  , parOneOf
+  , parOneOfMap
+  , parSequence
+  , parSequence_
+  , parTraverse
+  , parTraverse_
+  )
+  as Exports
 import Data.Either (Either(..)) as Exports
 import Data.Either.Nested (type (\/)) as Exports
 import Data.Foldable

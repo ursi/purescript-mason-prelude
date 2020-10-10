@@ -6,6 +6,7 @@
   , "functions"
   , "lists"
   , "math"
+  , "parallel"
   , "point-free"
   , "prelude"
   , "tuples"
