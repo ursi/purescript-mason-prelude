@@ -13,7 +13,7 @@ import Data.FoldableWithIndex (class FoldableWithIndex, foldlWithIndex, foldMapW
 import Data.Function.Uncurried as Exports
 import Data.Functor.Nested as Exports
 import Data.FunctorWithIndex (class FunctorWithIndex, mapWithIndex) as Exports
-import Data.List.Types (List(..)) as Exports
+import Data.List (List(..)) as Exports
 import Data.Maybe (Maybe(..), fromMaybe, maybe) as Exports
 import Data.Traversable (class Traversable, traverse, sequence) as Exports
 import Data.TraversableWithIndex (class TraversableWithIndex, traverseWithIndex) as Exports
