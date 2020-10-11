@@ -4,6 +4,7 @@
   , "debug"
   , "either"
   , "functions"
+  , "integers"
   , "lists"
   , "math"
   , "parallel"
