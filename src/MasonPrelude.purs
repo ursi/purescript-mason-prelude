@@ -5,7 +5,6 @@ module MasonPrelude
   ) where
 
 import Prelude as Exports
-import Prelude (mod)
 import Control.Parallel
   ( parApply
   , parOneOf
@@ -52,9 +51,10 @@ import Effect (Effect) as Exports
 import Effect.Class as Exports
 import Effect.Uncurried as Exports
 import Effect.Unsafe (unsafePerformEffect) as Exports
-import Math (pow)
 import PointFree as Exports
 import Unsafe.Coerce (unsafeCoerce) as Exports
+import Math (pow)
+import Prelude (mod)
 
 infixl 7 mod as %
 
