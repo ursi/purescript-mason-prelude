@@ -43,7 +43,7 @@ import Data.List (List(..)) as Exports
 import Data.Maybe (Maybe(..), fromMaybe, maybe) as Exports
 import Data.Traversable (class Traversable, traverse, sequence) as Exports
 import Data.TraversableWithIndex (class TraversableWithIndex, traverseWithIndex) as Exports
-import Data.Tuple (Tuple(..), fst, snd) as Exports
+import Data.Tuple (Tuple(..), curry, fst, snd, uncurry) as Exports
 import Data.Tuple.Nested (type (/\), (/\)) as Exports
 import Data.Unfoldable (class Unfoldable, unfoldr) as Exports
 import Debug (todo) as Exports
