@@ -4,6 +4,7 @@
   , "debug"
   , "either"
   , "functions"
+  , "generics-rep"
   , "integers"
   , "lists"
   , "math"
