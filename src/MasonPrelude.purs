@@ -36,7 +36,6 @@ import Data.FoldableWithIndex
   )
   as Exports
 import Data.Function.Uncurried as Exports
-import Data.Functor.Nested as Exports
 import Data.FunctorWithIndex (class FunctorWithIndex, mapWithIndex) as Exports
 import Data.Generic.Rep (class Generic) as Exports
 import Data.Generic.Rep.Show (genericShow) as Exports
@@ -53,6 +52,7 @@ import Effect (Effect) as Exports
 import Effect.Class as Exports
 import Effect.Uncurried as Exports
 import Effect.Unsafe (unsafePerformEffect) as Exports
+import MasonPrelude.Functor.Nested as Exports
 import PointFree as Exports
 import Unsafe.Coerce (unsafeCoerce) as Exports
 import Math (pow)

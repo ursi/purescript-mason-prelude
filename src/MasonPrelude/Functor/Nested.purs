@@ -1,4 +1,5 @@
-module Data.Functor.Nested where
+-- | This will probably be switched to [nested-functor](https://pursuit.purescript.org/packages/purescript-nested-functor/) once some of the quirks get sorted out.
+module MasonPrelude.Functor.Nested where
 
 import Prelude
 import PointFree ((<.))
