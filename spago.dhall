@@ -1,7 +1,7 @@
 { name = "mason-prelude"
 , dependencies =
   [ "arrays"
-  , "debug"
+  , "debuggest"
   , "either"
   , "functions"
   , "generics-rep"
