@@ -1,0 +1,31 @@
+{
+    "name": "purescript-mason-prelude",
+    "license": [
+        "BSD-3-Clause"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ursi/purescript-mason-prelude.git"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "output"
+    ],
+    "dependencies": {
+        "purescript-arrays": "^v5.3.1",
+        "purescript-debuggest": "ursi/purescript-debuggest#^v0.3.1",
+        "purescript-either": "^v4.1.1",
+        "purescript-functions": "^v4.0.0",
+        "purescript-generics-rep": "^v6.1.1",
+        "purescript-integers": "^v4.0.0",
+        "purescript-lists": "^v5.4.1",
+        "purescript-math": "^v2.1.1",
+        "purescript-parallel": "^v4.0.0",
+        "purescript-point-free": "ursi/purescript-point-free#^v0.1.1",
+        "purescript-prelude": "^v4.1.1",
+        "purescript-tuples": "^v5.1.0",
+        "purescript-unfoldable": "^v4.1.0"
+    }
+}
