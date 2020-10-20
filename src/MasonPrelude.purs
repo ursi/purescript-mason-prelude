@@ -5,6 +5,7 @@ module MasonPrelude
   ) where
 
 import Prelude as Exports
+import Control.Apply (lift2, lift3, lift4, lift5) as Exports
 import Control.Parallel
   ( parApply
   , parOneOf
