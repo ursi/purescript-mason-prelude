@@ -2,6 +2,7 @@ module MasonPrelude
   ( module Exports
   , (%)
   , (^)
+  , fromChar
   ) where
 
 import Prelude as Exports
@@ -44,6 +45,8 @@ import Data.Generic.Rep.Show (genericShow) as Exports
 import Data.Int (ceil, floor, round, toNumber) as Exports
 import Data.List (List(..)) as Exports
 import Data.Maybe (Maybe(..), fromMaybe, maybe) as Exports
+import Data.String (toLower, toUpper) as Exports
+import Data.String.CodeUnits (fromCharArray, toCharArray) as Exports
 import Data.Traversable (class Traversable, traverse, sequence) as Exports
 import Data.TraversableWithIndex (class TraversableWithIndex, traverseWithIndex) as Exports
 import Data.Tuple (Tuple(..), curry, fst, snd, uncurry) as Exports
@@ -59,9 +62,13 @@ import Effect.Unsafe (unsafePerformEffect) as Exports
 import MasonPrelude.Functor.Nested as Exports
 import PointFree as Exports
 import Unsafe.Coerce (unsafeCoerce) as Exports
+import Data.String.CodeUnits as CU
 import Math (pow)
 import Prelude (mod)
 
 infixl 7 mod as %
 
 infixl 8 pow as ^
+
+fromChar :: Char -> String
+fromChar = CU.singleton
