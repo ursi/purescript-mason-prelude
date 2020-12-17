@@ -1,20 +1,13 @@
 {
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem
-      (system:
-        with nixpkgs.legacyPackages.${system};
-
-        {
-          devShell = mkShell {
-            buildInputs = [
-              dhall
-              nodejs
-              nodePackages.bower
-              nodePackages.pulp
-              purescript
-              spago
-            ];
-          };
-        }
-      );
+  outputs = { self, nixpkgs, utils }:
+    utils.simpleShell
+      [
+        "dhall"
+        "nodejs"
+        "nodePackages.bower"
+        "nodePackages.pulp"
+        "purescript"
+        "spago"
+      ]
+      nixpkgs;
 }
