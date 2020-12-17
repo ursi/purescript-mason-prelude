@@ -26,6 +26,7 @@
         "purescript-parallel": "^v4.0.0",
         "purescript-point-free": "ursi/purescript-point-free#^v0.1.1",
         "purescript-prelude": "^v4.1.1",
+        "purescript-strings": "^v4.0.2",
         "purescript-tuples": "^v5.1.0",
         "purescript-unfoldable": "^v4.1.0"
     }
