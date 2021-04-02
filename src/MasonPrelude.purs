@@ -41,10 +41,10 @@ import Data.FoldableWithIndex
 import Data.Function.Uncurried as Exports
 import Data.FunctorWithIndex (class FunctorWithIndex, mapWithIndex) as Exports
 import Data.Generic.Rep (class Generic) as Exports
-import Data.Generic.Rep.Show (genericShow) as Exports
 import Data.Int (ceil, floor, round, toNumber) as Exports
 import Data.List (List(..)) as Exports
 import Data.Maybe (Maybe(..), fromMaybe, maybe) as Exports
+import Data.Show.Generic (genericShow) as Exports
 import Data.String (toLower, toUpper) as Exports
 import Data.String.CodeUnits (fromCharArray, toCharArray) as Exports
 import Data.Traversable (class Traversable, traverse, sequence) as Exports
@@ -52,7 +52,6 @@ import Data.TraversableWithIndex (class TraversableWithIndex, traverseWithIndex)
 import Data.Tuple (Tuple(..), curry, fst, snd, uncurry) as Exports
 import Data.Tuple.Nested (type (/\), (/\)) as Exports
 import Data.Unfoldable (class Unfoldable, unfoldr) as Exports
-import Debug (todo) as Exports
 import Effect (Effect) as Exports
 import Effect.Class as Exports
 import Effect.Class.Console (log, logShow) as Exports
