@@ -14,20 +14,18 @@
         "output"
     ],
     "dependencies": {
-        "purescript-arrays": "^v5.3.1",
-        "purescript-debuggest": "ursi/purescript-debuggest#^v0.3.1",
-        "purescript-console": "^v4.4.0",
-        "purescript-either": "^v4.1.1",
-        "purescript-functions": "^v4.0.0",
-        "purescript-generics-rep": "^v6.1.1",
-        "purescript-integers": "^v4.0.0",
-        "purescript-lists": "^v5.4.1",
-        "purescript-math": "^v2.1.1",
-        "purescript-parallel": "^v4.0.0",
-        "purescript-point-free": "ursi/purescript-point-free#^v0.1.1",
-        "purescript-prelude": "^v4.1.1",
-        "purescript-strings": "^v4.0.2",
-        "purescript-tuples": "^v5.1.0",
-        "purescript-unfoldable": "^v4.1.0"
+        "purescript-arrays": "^v6.0.0",
+        "purescript-console": "^v5.0.0",
+        "purescript-either": "^v5.0.0",
+        "purescript-functions": "^v5.0.0",
+        "purescript-integers": "^v5.0.0",
+        "purescript-lists": "^v6.0.0",
+        "purescript-math": "^v3.0.0",
+        "purescript-parallel": "^v5.0.0",
+        "purescript-point-free": "https://github.com/ursi/purescript-point-free.git#v0.1.3",
+        "purescript-prelude": "^v5.0.0",
+        "purescript-strings": "^v5.0.0",
+        "purescript-tuples": "^v6.0.0",
+        "purescript-unfoldable": "^v5.0.0"
     }
 }
