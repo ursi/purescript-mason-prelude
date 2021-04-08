@@ -14,6 +14,7 @@
         parallel
         point-free
         prelude
+        ps-pkgs-ns.ursi.debug
         strings
         tuples
         unfoldable
