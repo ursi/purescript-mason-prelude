@@ -1,3 +1,5 @@
+Available as `ursi.prelude` in [purs-nix](https://github.com/ursi/purs-nix).
+
 This prelude has two objectives
 
 - Export things that are commonly used/recognizable that are also not likely to be the name of anything else.
