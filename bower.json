@@ -1,31 +1,32 @@
 {
-    "name": "purescript-mason-prelude",
-    "license": [
-        "BSD-3-Clause"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ursi/purescript-mason-prelude.git"
-    },
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "output"
-    ],
-    "dependencies": {
-        "purescript-arrays": "^v6.0.0",
-        "purescript-console": "^v5.0.0",
-        "purescript-either": "^v5.0.0",
-        "purescript-functions": "^v5.0.0",
-        "purescript-integers": "^v5.0.0",
-        "purescript-lists": "^v6.0.0",
-        "purescript-math": "^v3.0.0",
-        "purescript-parallel": "^v5.0.0",
-        "purescript-point-free": "https://github.com/ursi/purescript-point-free.git#v0.1.3",
-        "purescript-prelude": "^v5.0.0",
-        "purescript-strings": "^v5.0.0",
-        "purescript-tuples": "^v6.0.0",
-        "purescript-unfoldable": "^v5.0.0"
-    }
+  "dependencies": {
+    "purescript-arrays": "^v6.0.0",
+    "purescript-console": "^v5.0.0",
+    "purescript-debuggest": "https://github.com/ursi/purescript-debuggest.git#v0.4.1",
+    "purescript-either": "^v5.0.0",
+    "purescript-functions": "^v5.0.0",
+    "purescript-integers": "^v5.0.0",
+    "purescript-lists": "^v6.0.0",
+    "purescript-math": "^v3.0.0",
+    "purescript-parallel": "^v5.0.0",
+    "purescript-point-free": "https://github.com/ursi/purescript-point-free.git#v0.1.3",
+    "purescript-prelude": "^v5.0.0",
+    "purescript-strings": "^v5.0.0",
+    "purescript-tuples": "^v6.0.0",
+    "purescript-unfoldable": "^v5.0.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "license": [
+    "BSD-3-Clause"
+  ],
+  "name": "purescript-mason-prelude",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ursi/purescript-mason-prelude.git"
+  }
 }
