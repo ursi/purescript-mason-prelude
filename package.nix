@@ -1,6 +1,7 @@
-{ ps-pkgs, ps-pkgs-ns, ... }:
+{ ps-pkgs, ps-pkgs-ns, licenses, ... }:
   with ps-pkgs;
   { version = "0.7.0";
+
     dependencies =
       [ arrays
         console
@@ -17,4 +18,10 @@
         tuples
         unfoldable
       ];
+
+    pursuit =
+      { name = "mason-prelude";
+        license = licenses.bsd3;
+        repo = "https://github.com/ursi/purescript-mason-prelude.git";
+      };
   }
