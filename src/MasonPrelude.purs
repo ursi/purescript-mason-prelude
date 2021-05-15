@@ -63,6 +63,7 @@ import MasonPrelude.Functor.Nested as Exports
 import MasonPrelude.Parallel as Exports
 import PointFree as Exports
 import Unsafe.Coerce (unsafeCoerce) as Exports
+
 import Data.String.CodeUnits as CU
 import Math (pow)
 import Prelude (mod)
