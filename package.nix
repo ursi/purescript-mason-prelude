@@ -6,6 +6,7 @@
       [ arrays
         console
         either
+        exceptions
         functions
         integers
         lists

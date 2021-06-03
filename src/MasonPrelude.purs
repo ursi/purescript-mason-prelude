@@ -57,6 +57,7 @@ import Effect (Effect) as Exports
 import Effect.Class as Exports
 import Effect.Class.Console (log, logShow) as Exports
 import Effect.Exception (throw) as Exports
+import Effect.Exception.Unsafe (unsafeThrow) as Exports
 import Effect.Uncurried as Exports
 import Effect.Unsafe (unsafePerformEffect) as Exports
 import MasonPrelude.Functor.Nested as Exports
