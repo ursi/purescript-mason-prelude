@@ -67,7 +67,7 @@ import Unsafe.Coerce (unsafeCoerce) as Exports
 import Type.Proxy (Proxy(..)) as Exports
 
 import Data.String.CodeUnits as CU
-import Math (pow)
+import Data.Number (pow)
 import Prelude (mod)
 
 infixl 7 mod as %

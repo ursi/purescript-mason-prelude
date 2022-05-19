@@ -10,7 +10,7 @@
         functions
         integers
         lists
-        math
+        numbers
         parallel
         point-free
         prelude

@@ -10,14 +10,7 @@
          let
            inherit (purs-nix) purs;
            package = import ./package.nix purs-nix;
-
-           inherit
-             (purs
-                { inherit (package) dependencies;
-                  src = ./src;
-                }
-             )
-             command;
+           inherit (purs { inherit (package) dependencies; }) command;
          in
          { devShell =
              make-shell
