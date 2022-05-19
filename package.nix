@@ -1,6 +1,6 @@
 { ps-pkgs, ps-pkgs-ns, licenses, ... }:
   with ps-pkgs;
-  { version = "0.9.1";
+  { version = "0.10.0";
 
     dependencies =
       [ arrays
