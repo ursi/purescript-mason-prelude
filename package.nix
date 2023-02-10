@@ -11,6 +11,7 @@
         integers
         lists
         numbers
+        nullable
         parallel
         point-free
         prelude

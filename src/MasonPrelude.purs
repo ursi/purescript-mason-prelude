@@ -44,6 +44,7 @@ import Data.Generic.Rep (class Generic) as Exports
 import Data.Int (ceil, floor, round, toNumber) as Exports
 import Data.List (List(..)) as Exports
 import Data.Maybe (Maybe(..), fromMaybe, maybe) as Exports
+import Data.Nullable (Nullable) as Exports
 import Data.Show.Generic (genericShow) as Exports
 import Data.String (toLower, toUpper) as Exports
 import Data.String.CodeUnits (fromCharArray, toCharArray) as Exports
