@@ -64,6 +64,7 @@ import Effect.Unsafe (unsafePerformEffect) as Exports
 import MasonPrelude.Functor.Nested as Exports
 import MasonPrelude.Parallel as Exports
 import PointFree as Exports
+import Safe.Coerce as Exports
 import Unsafe.Coerce (unsafeCoerce) as Exports
 import Type.Proxy (Proxy(..)) as Exports
 

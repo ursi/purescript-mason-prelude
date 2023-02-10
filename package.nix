@@ -16,6 +16,7 @@
         point-free
         prelude
         ps-pkgs-ns.ursi.debug
+        safe-coerce
         strings
         tuples
         unfoldable
