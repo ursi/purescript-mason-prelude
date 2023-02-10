@@ -3,6 +3,7 @@ module MasonPrelude
   , (%)
   , (^)
   , fromChar
+  , log_
   ) where
 
 import Prelude as Exports
@@ -69,12 +70,15 @@ import Unsafe.Coerce (unsafeCoerce) as Exports
 import Type.Proxy (Proxy(..)) as Exports
 
 import Data.String.CodeUnits as CU
-import Data.Number (pow)
-import Prelude (mod)
+import Data.Number as Number
+import Prelude ((/), mod)
 
 infixl 7 mod as %
 
-infixl 8 pow as ^
+infixl 8 Number.pow as ^
 
 fromChar :: Char -> String
 fromChar = CU.singleton
+
+log_ :: Number -> Number -> Number
+log_ base n = Number.log n / Number.log base
