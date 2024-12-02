@@ -19,8 +19,10 @@ import Control.Parallel
   , parTraverse_
   )
   as Exports
+import Data.Bounded.Generic (genericBottom, genericTop) as Exports
 import Data.Either (Either(..)) as Exports
 import Data.Either.Nested (type (\/)) as Exports
+import Data.Eq.Generic (genericEq) as Exports
 import Data.Foldable
   ( class Foldable
   , fold
@@ -46,6 +48,7 @@ import Data.Int (ceil, floor, round, toNumber) as Exports
 import Data.List (List(..)) as Exports
 import Data.Maybe (Maybe(..), fromMaybe, maybe) as Exports
 import Data.Nullable (Nullable) as Exports
+import Data.Ord.Generic (genericCompare) as Exports
 import Data.Show.Generic (genericShow) as Exports
 import Data.String (toLower, toUpper) as Exports
 import Data.String.CodeUnits (fromCharArray, toCharArray) as Exports
